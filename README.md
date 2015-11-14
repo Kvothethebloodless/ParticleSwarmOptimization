@@ -1,4 +1,4 @@
-<h1> A 2-Dimensional Particle Swarm Algorithm Implementation </h1>
+<h2> A 2-Dimensional Particle Swarm Algorithm Implementation </h2>
 
 <p> This is an implementation of the Particle Swarm Algorithm for solving two-dimensional optimization problems </p>
 
