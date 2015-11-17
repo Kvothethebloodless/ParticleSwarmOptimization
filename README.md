@@ -31,6 +31,8 @@ Score Function can be changed by changing the method```PSO.funcdef() ```
 
 Feel free to fork and experiment!
 
+Reference: http://www.softcomputing.net/aciis.pdf
 
+Algorithm implemented from directions given in the above reference article.
 
 
