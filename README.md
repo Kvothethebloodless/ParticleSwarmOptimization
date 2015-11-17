@@ -1,9 +1,9 @@
-<h2> A 2-Dimensional Particle Swarm Algorithm Implementation </h2>
+<h2>A 2-Dimensional Particle Swarm Algorithm Implementation </h2>
 
 This is an implementation of the Particle Swarm Algorithm for solving two-dimensional optimization problems.
 
 
-<h3> Usage: </h3>
+<h3>Usage: </h3>
 
 The class **PSO** is the base class to carry out all operations such as updating velocities , positions, global best, local best position values.
 
