@@ -15,18 +15,18 @@ class PSO():
 The method ```PSO.funcdef``` holds the required defitinion of the score. It is currently the __norm__ function.
 
 ```python
-    def funcdef(self,locs,no_particles):
-        score_curr = np.empty(no_particles);
-        for i in range(no_particles):
-            score_curr[i] = np.linalg.norm(locs[i])
-            print(score_curr[i])
-        return score_curr
+def funcdef(self,locs,no_particles):
+    score_curr = np.empty(no_particles);
+    for i in range(no_particles):
+        score_curr[i] = np.linalg.norm(locs[i])
+        print(score_curr[i])
+    return score_curr
 ```
 
-The animation doesn't occure in realtime. The ```PSO.valueIO``` method writes all states that the particles go through, to a __.npy__ file. The script __plotter.py__ reads the file and animates the states using scatter plots.
+The animation doesn't occure in realtime. The ```PSO.valueIO() ``` method writes all states that the particles go through, to a __.npy__ file. The script __plotter.py__ reads the file and animates the states using scatter plots.
 
 
-Score Function can be changed by changing *PSO.funcdef*
+Score Function can be changed by changing ```PSO.funcdef() ```
 
 
 Feel free to fork and experiment!
