@@ -12,7 +12,7 @@ class PSO():
     def __init__(self,no_particles,no_dim,self_accel_coeff,global_accel_coeff,dt):
 ```
 
-The method ```python PSO.funcdef``` holds the required defitinion of the score. It is currently the __norm__ function.
+The method ```PSO.funcdef``` holds the required defitinion of the score. It is currently the __norm__ function.
 
 ```python
     def funcdef(self,locs,no_particles):
@@ -23,7 +23,7 @@ The method ```python PSO.funcdef``` holds the required defitinion of the score. 
         return score_curr
 ```
 
-The animation doesn't occure in realtime. The ```python PSO.valueIO``` method writes all states that the particles go through, to a __.npy__ file. The script __plotter.py__ reads the file and animates the states using scatter plots.
+The animation doesn't occure in realtime. The ```PSO.valueIO``` method writes all states that the particles go through, to a __.npy__ file. The script __plotter.py__ reads the file and animates the states using scatter plots.
 
 
 Score Function can be changed by changing *PSO.funcdef*
