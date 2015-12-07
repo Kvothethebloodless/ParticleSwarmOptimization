@@ -48,10 +48,10 @@ min_pos_y = min_pos_x;
 	
 
 
-min_pos_x = -5
-min_pos_y = -5
-max_pos_x = 5
-max_pos_y = 5;
+min_pos_x = -15
+min_pos_y = -15
+max_pos_x = 15
+max_pos_y =15;
 
 # Create new Figure and an Axes which fills it.
 fig = plt.figure(figsize=(7, 7))
@@ -73,8 +73,8 @@ ax.set_ylim(min_pos_y,max_pos_y), ax.set_yticks(np.arange(min_pos_x,max_pos_x,1)
 # Construct the scatter which we will update during animation
 # as the raindrops develop.
 
-scat = ax.scatter(pos_data[0][:, 0], pos_data[0][:, 1],lw=0.5, c=colors);
-ax.grid(True)
+scat = ax.scatter(pos_data[0][:, 0], pos_data[0][:, 1],lw=1,s=200, c=colors);
+#ax.grid(True)
 
 
 #def readdata():
@@ -94,11 +94,19 @@ ax.grid(True)
 
 	
 
+fno = np.array([1,5,11,19,30,50,70,100])
 def update_plot(frame_number):
+	
+	if np.sum(fno==frame_number):
+		print('--')
+		name = str(frame_number)+'.png'
+		plt.savefig(name,bbox_inches='tight')
+	else:
+		print('00')
 	print(frame_number)
 	scat.set_offsets(pos_data[frame_number])
 	
 
-animation = FuncAnimation(fig, update_plot, interval=100)
+animation = FuncAnimation(fig, update_plot,frames =no_frames, interval=100,repeat=False)
 
 plt.show()

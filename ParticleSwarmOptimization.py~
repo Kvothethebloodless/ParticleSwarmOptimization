@@ -64,6 +64,7 @@ class PSO():
 		self.globalminlocation = (state*curr_globalmin)+(np.invert(state)*self.globalminlocation);
 
 	def funcdef(self,locs,no_particles):
+		#x1 sin(4πx2) − x2 sin(4πx1 + π)+1
 		score_curr = np.empty(no_particles);
 		for i in range(no_particles):
 			score_curr[i] = np.linalg.norm(locs[i])
@@ -93,7 +94,6 @@ class PSO():
 
 		
 	def valueIO(self):
-
 		self.posseries_data.append(self.current_pos) #np.hstack((self.posseries_data,self.current_pos))
 		self.spreadseries_data.append(self.spread)# = np.append(self.spreadseries_data,self.spread)
 		self.centroidseries_data.append(self.centroid)# = np.vstack((self.centroidseries_data,self.centroid))
@@ -103,11 +103,11 @@ class PSO():
 		print("The centroid is at " + str(self.centroid)+"\n");
 		print("The spread is " + str(self.spread)+"\n");
 		print("The positions are " + str(self.current_pos)+"\n");
-		#print("-----");
+		print("-----");
 		print("The current score is  "+str(self.curr_score)+"\n");
 		print("------")
-		#print("The current velocities are "+ str(self.velocity)+"\n");
-		#print("#$#$#$#$#$#$ \n")
+		print("The current velocities are "+ str(self.velocity)+"\n");
+		print("#$#$#$#$#$#$ \n")
 		
 		print("The current best score  is"+str(np.min(self.curr_score))+"\n");
 		
@@ -115,7 +115,7 @@ class PSO():
 
 
 
-pso = PSO(10,2,.5,.5,.5);
+pso = PSO(100,2,.5,.5,.5);
 indx = 0;
 lst_score = float("inf");
 pos_tracker = np.empty(np.shape(pso.current_pos));
